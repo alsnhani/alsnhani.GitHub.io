@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المحامي علي السنحاني - مكتب استشارات قانونية</title>
+    <meta name="description" content="مكتب المحامي علي عبدالله السنحاني - استشارات قانونية متخصصة في القانون التجاري والعائلي وشؤون المغتربين">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Amiri', serif;
+            font-weight: 700;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Navigation */
+        nav {
+            background-color: #1a3a52;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav h1 {
+            font-size: 1.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #d4af37;
+        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5282 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        /* Section Styles */
+        section {
+            padding: 4rem 2rem;
+        }
+        section h2 {
+            font-size: 2.5rem;
+            color: #1a3a52;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .about-section {
+            background-color: #f0f4f8;
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .about-text h3 {
+            color: #1a3a52;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        .about-text p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        .info-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .info-item {
+            display: flex;
+            gap: 1rem;
+        }
+        .info-icon {
+            font-size: 2rem;
+        }
+        .info-content h4 {
+            color: #1a3a52;
+            margin-bottom: 0.5rem;
+        }
+        .positions-list {
+            list-style: none;
+            padding: 0;
+        }
+        .positions-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .positions-list li:last-child {
+            border-bottom: none;
+        }
+        .year {
+            background-color: #d4af37;
+            color: #1a3a52;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        /* Values Section */
+        .values-section {
+            background-color: #f0f4f8;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+        .value-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .value-card h3 {
+            color: #1a3a52;
+            margin-bottom: 0.5rem;
+        }
+        /* Services Section */
+        .services-section {
+            background-color: white;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border-right: 4px solid #d4af37;
+            transition: all 0.3s;
+        }
+        .service-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+        }
+        .service-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .service-card h3 {
+            color: #1a3a52;
+            margin-bottom: 0.8rem;
+        }
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5282 100%);
+            color: white;
+            text-align: center;
+        }
+        .contact-section h2 {
+            color: white;
+        }
+        .contact-section p {
+            color: #e0e0e0;
+        }
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-block;
+            border: 2px solid transparent;
+        }
+        .btn-primary {
+            background-color: #d4af37;
+            color: #1a3a52;
+        }
+        .btn-primary:hover {
+            background-color: #fff;
+            transform: scale(1.05);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .btn-secondary:hover {
+            background-color: white;
+            color: #1a3a52;
+        }
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1fa853;
+            transform: scale(1.05);
+        }
+        /* Footer */
+        footer {
+            background-color: #0f1f2e;
+            color: #999;
+            text-align: center;
+            padding: 2rem;
+        }
+        footer p {
+            margin: 0.5rem 0;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+            nav a {
+                margin-left: 1rem;
+                font-size: 0.9rem;
+            }
+            .contact-buttons {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <h1>المحامي علي السنحاني</h1>
+            <div>
+                <a href="#about">عني</a>
+                <a href="#services">الخدمات</a>
+                <a href="#contact">التواصل</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>مرحباً بك في مكتبي</h2>
+            <p>استشارات قانونية متخصصة وموثوقة</p>
+            <p>في خدمتك منذ أكثر من 15 سنة</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>من أنا</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>المحامي علي عبدالله السنحاني</h3>
+                    <p>محام متخصص وناشط حقوقي ملتزم بتقديم الخدمات القانونية الممتازة والدفاع عن حقوق الإنسان.</p>
+                    <p>أعمل بشغف وإخلاص لخدمة عملائي والدفاع عن قضاياهم بكل جدية واحترافية.</p>
+                    <p>متخصص في القانون التجاري والعائلي وشؤون المغتربين اليمنيين.</p>
+                </div>
+                <div class="info-section">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div class="info-content">
+                                <h4>الهاتف</h4>
+                                <p>+967733163848</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">✉️</div>
+                            <div class="info-content">
+                                <h4>البريد الإلكتروني</h4>
+                                <p>alsnhany@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">💬</div>
+                            <div class="info-content">
+                                <h4>واتس آب</h4>
+                                <p>+967733163848</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-content">
+                                <h4>الموقع</h4>
+                                <p>صنعاء، الجمهورية اليمنية</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e0e0e0;">
+                        <h4 style="color: #1a3a52; margin-bottom: 1rem;">المناصب الحالية</h4>
+                        <ul class="positions-list">
+                            <li>سكرتير منظمة هود للدفاع عن الحقوق والحريات <span class="year">(2008)</span></li>
+                            <li>رئيس تحالف إب الحقوقي <span class="year">(2011)</span></li>
+                            <li>رئيس المنظمة الوطنية لمناصرة المغتربين اليمنيين <span class="year">(2014)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2>القيم الأساسية</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="icon">⚖️</div>
+                    <h3>العدالة</h3>
+                    <p>إيمان راسخ بحق الجميع في المساواة القانونية</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">🕊️</div>
+                    <h3>الاستقلالية</h3>
+                    <p>صوت حر لا يُشترى</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">✊</div>
+                    <h3>الولاء للحق</h3>
+                    <p>الانتصار للضعيف والوقوف في وجه الباطل</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">🤝</div>
+                    <h3>المسؤولية المجتمعية</h3>
+                    <p>انخراط عميق في الدفاع عن حقوق الإنسان والمغتربين</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>الخدمات المتخصصة</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">📋</div>
+                    <h3>القانون التجاري</h3>
+                    <p>تأسيس وتوثيق الشركات، العقود التجارية، قضايا الشركات</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">👨‍👩‍👧‍👦</div>
+                    <h3>القانون العائلي</h3>
+                    <p>قضايا الأحوال الشخصية، الوصايا، الوراثة، الدستور العائلي</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🌍</div>
+                    <h3>شؤون المغتربين</h3>
+                    <p>استشارات قانونية للمغتربين اليمنيين في الخارج</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💼</div>
+                    <h3>الاستشارات القانونية</h3>
+                    <p>استشارات قانونية متخصصة في مختلف المجالات</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">⚖️</div>
+                    <h3>التمثيل القضائي</h3>
+                    <p>تمثيل أمام الجهات القضائية والمحاكم</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">📄</div>
+                    <h3>صياغة العقود</h3>
+                    <p>صياغة واستخراج العقود والوثائق القانونية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>تواصل معي</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                أنا هنا لمساعدتك في جميع احتياجاتك القانونية. لا تتردد في التواصل معي للاستشارة أو الاستفسار عن أي خدمة.
+            </p>
+            <div class="contact-buttons">
+                <a href="tel:+967733163848" class="btn btn-primary">
+                    📞 اتصل الآن
+                </a>
+                <a href="mailto:alsnhany@gmail.com" class="btn btn-secondary">
+                    ✉️ أرسل بريد
+                </a>
+                <a href="https://wa.me/967733163848" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                    💬 واتس آب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 مكتب المحامي علي عبدالله السنحاني. جميع الحقوق محفوظة.</p>
+            <p style="font-size: 0.9rem; color: #999; margin-top: 1rem;">تم تطويره بواسطة Manus</p>
+        </div>
+    </footer>
+</body>
+</html>
