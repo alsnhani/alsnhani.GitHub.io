@@ -263,6 +263,29 @@
         footer p {
             margin: 0.5rem 0;
         }
+        /* Pleas Section */
+        .pleas-section {
+            background-color: #f0f4f8;
+        }
+        .plea-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .plea-card h3 {
+            color: #1a3a52;
+            margin-bottom: 1rem;
+        }
+        audio {
+            width: 100%;
+            margin-top: 1rem;
+            border-radius: 5px;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .about-content {
@@ -295,6 +318,7 @@
             <div>
                 <a href="#about">عني</a>
                 <a href="#services">الخدمات</a>
+                <a href="#pleas">مرافعات</a>
                 <a href="#contact">التواصل</a>
             </div>
         </div>
@@ -432,7 +456,23 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Pleas Section -->
+    <section id="pleas" class="pleas-section">
+        <div class="container">
+            <h2>مرافعات قانونية</h2>
+            <div class="plea-card">
+                <div class="icon" style="font-size: 3rem; margin-bottom: 1rem;">🎙️</div>
+                <h3>مرافعة صوتية للمحامي علي السنحاني</h3>
+                <p>استمع إلى أحد المرافعات القانونية التي قدمها المحامي علي السنحاني في إحدى القضايا الحقوقية.</p>
+                <audio controls>
+                    <source src="plea.mp3" type="audio/mpeg">
+                    متصفحك لا يدعم تشغيل الملفات الصوتية.
+                </audio>
+            </div>
+        </div>
+    </section>
+	
+	    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>تواصل معي</h2>
