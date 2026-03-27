@@ -1,632 +1,277 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المحامي علي السنحاني - مكتب استشارات قانونية</title>
-    <meta name="description" content="مكتب المحامي علي عبدالله السنحاني - استشارات قانونية متخصصة في القانون التجاري والعائلي وشؤون المغتربين">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Tajawal', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Amiri', serif;
-            font-weight: 700;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        /* Navigation */
-        nav {
-            background-color: #1a3a52;
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav h1 {
-            font-size: 1.5rem;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 2rem;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #d4af37;
-        }
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1a3a52 0%, #2c5282 100%);
-            color: white;
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-        /* Section Styles */
-        section {
-            padding: 4rem 2rem;
-        }
-        section h2 {
-            font-size: 2.5rem;
-            color: #1a3a52;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        .about-section {
-            background-color: #f0f4f8;
-        }
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        .about-text h3 {
-            color: #1a3a52;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-        .about-text p {
-            margin-bottom: 1rem;
-            font-size: 1.05rem;
-            line-height: 1.8;
-        }
-        .info-section {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        .info-item {
-            display: flex;
-            gap: 1rem;
-        }
-        .info-icon {
-            font-size: 2rem;
-        }
-        .info-content h4 {
-            color: #1a3a52;
-            margin-bottom: 0.5rem;
-        }
-        .positions-list {
-            list-style: none;
-            padding: 0;
-        }
-        .positions-list li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #e0e0e0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .positions-list li:last-child {
-            border-bottom: none;
-        }
-        .year {
-            background-color: #d4af37;
-            color: #1a3a52;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: bold;
-        }
-        /* Values Section */
-        .values-section {
-            background-color: #f0f4f8;
-        }
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        .value-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .value-card:hover {
-            transform: translateY(-5px);
-        }
-        .value-card .icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .value-card h3 {
-            color: #1a3a52;
-            margin-bottom: 0.5rem;
-        }
-        /* Services Section */
-        .services-section {
-            background-color: white;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        .service-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-            border-right: 4px solid #d4af37;
-            transition: all 0.3s;
-        }
-        .service-card:hover {
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            transform: translateY(-5px);
-        }
-        .service-card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .service-card h3 {
-            color: #1a3a52;
-            margin-bottom: 0.8rem;
-        }
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, #1a3a52 0%, #2c5282 100%);
-            color: white;
-            text-align: center;
-        }
-        .contact-section h2 {
-            color: white;
-        }
-        .contact-section p {
-            color: #e0e0e0;
-        }
-        .contact-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-            display: inline-block;
-            border: 2px solid transparent;
-        }
-        .btn-primary {
-            background-color: #d4af37;
-            color: #1a3a52;
-        }
-        .btn-primary:hover {
-            background-color: #fff;
-            transform: scale(1.05);
-        }
-        .btn-secondary {
-            background-color: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-        .btn-secondary:hover {
-            background-color: white;
-            color: #1a3a52;
-        }
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: white;
-        }
-        .btn-whatsapp:hover {
-            background-color: #1fa853;
-            transform: scale(1.05);
-        }
-        /* Footer */
-        footer {
-            background-color: #0f1f2e;
-            color: #999;
-            text-align: center;
-            padding: 2rem;
-        }
-        footer p {
-            margin: 0.5rem 0;
-        }
-        /* Pleas Section */
-        .pleas-section {
-            background-color: #f0f4f8;
-        }
-        .plea-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 800px;
-            margin: 0 auto 2rem auto;
-            text-align: center;
-        }
-        .plea-card h3 {
-            color: #1a3a52;
-            margin-bottom: 1rem;
-        }
-        audio {
-            width: 100%;
-            margin-top: 1rem;
-            border-radius: 5px;
-        }
-        /* Plea Text Styles */
-        .plea-text-container {
-            margin-top: 2rem;
-            border-top: 2px solid #d4af37;
-            padding-top: 2rem;
-        }
-        .plea-toggle-btn {
-            background-color: #d4af37;
-            color: #1a3a52;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: all 0.3s;
-            width: 100%;
-            text-align: right;
-        }
-        .plea-toggle-btn:hover {
-            background-color: #c9a227;
-            transform: scale(1.02);
-        }
-        .plea-text-content {
-            display: none;
-            margin-top: 1.5rem;
-            padding: 1.5rem;
-            background-color: #f8f9fa;
-            border-radius: 5px;
-            line-height: 2;
-            text-align: right;
-            font-size: 1.05rem;
-        }
-        .plea-text-content.active {
-            display: block;
-        }
-        .plea-text-content p {
-            margin-bottom: 1.5rem;
-            text-align: justify;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مكتب المحامي علي السنحاني</title>
+  <meta name="description" content="مكتب المحامي علي عبد الله قاسم السنحاني - استشارات قانونية، قضايا مدنية وتجارية، وصياغة عقود وفق الأنظمة اليمنية والسعودية." />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Tahoma", "Arial", sans-serif;
+    }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero h2 {
-                font-size: 2rem;
-            }
-            nav a {
-                margin-left: 1rem;
-                font-size: 0.9rem;
-            }
-            .contact-buttons {
-                flex-direction: column;
-            }
-            .btn {
-                width: 100%;
-            }
-        }
-    </style>
+    body {
+      background: #f8f8f8;
+      color: #1f1f1f;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav h1 {
+      font-size: 22px;
+      color: #d4af37;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(17,24,39,0.88), rgba(17,24,39,0.88)),
+                  url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1400&q=80') center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #d4af37;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto 25px;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d4af37;
+      color: #111827;
+      padding: 12px 24px;
+      margin: 8px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 32px;
+      color: #111827;
+      margin-bottom: 25px;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #d4af37;
+      margin: 10px auto 0;
+    }
+
+    .about, .contact-box {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+    }
+
+    .services, .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+      border-top: 4px solid #d4af37;
+    }
+
+    .card h3 {
+      color: #111827;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 30px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #25D366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      nav {
+        gap: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
+
+  <header>
     <nav>
-        <div class="container">
-            <h1>المحامي علي السنحاني</h1>
-            <div class="nav-links">
-                <a href="#about">عني</a>
-                <a href="#services">الخدمات</a>
-                <a href="#pleas">مرافعات</a>
-                <a href="#contact">التواصل</a>
-            </div>
-        </div>
+      <h1>⚖️ مكتب المحامي علي السنحاني</h1>
+      <ul>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="#whyus">لماذا نحن</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
-            <h2>مرحباً بك في مكتبي</h2>
-            <p>استشارات قانونية متخصصة وموثوقة</p>
-            <p style="font-size: 1rem; opacity: 0.9;">في خدمتك منذ أكثر من 15 سنة</p>
-        </div>
-    </header>
+  <section class="hero">
+    <h2>استشارات قانونية باحترافية وسرية تامة</h2>
+    <p>
+      يقدم مكتب المحامي علي عبد الله قاسم السنحاني خدمات قانونية متكاملة في القضايا المدنية والتجارية،
+      وصياغة العقود، وتأسيس الشركات وفق الأنظمة اليمنية والسعودية.
+    </p>
+    <a class="btn" href="#contact">احجز استشارة الآن</a>
+    <a class="btn" href="https://wa.me/967733163848" target="_blank">تواصل عبر واتساب</a>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>من أنا</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>المحامي علي عبدالله السنحاني</h3>
-                    <p>محام متخصص وناشط حقوقي ملتزم بتقديم الخدمات القانونية الممتازة والدفاع عن حقوق الإنسان.</p>
-                    <p>أعمل بشغف وإخلاص لخدمة عملائي والدفاع عن قضاياهم بكل جدية واحترافية.</p>
-                    <p>متخصص في القانون التجاري والعائلي وشؤون المغتربين اليمنيين.</p>
-                </div>
-                <div class="info-section">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <div class="info-icon">📞</div>
-                            <div class="info-content">
-                                <h4>الهاتف</h4>
-                                <p><a href="tel:+967733163848" style="color: #1a3a52; text-decoration: none; font-weight: bold;">+967733163848</a></p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">✉️</div>
-                            <div class="info-content">
-                                <h4>البريد الإلكتروني</h4>
-                                <p><a href="mailto:alsnhany@hotmail.com" style="color: #1a3a52; text-decoration: none; font-weight: bold;">alsnhany@hotmail.com</a></p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">💬</div>
-                            <div class="info-content">
-                                <h4>واتس آب</h4>
-                                <p><a href="https://wa.me/967733163848?text=السلام عليكم سعادة المحامي، أود حجز استشارة قانونية" target="_blank" rel="noopener noreferrer" style="color: #1a3a52; text-decoration: none; font-weight: bold;">+967733163848</a></p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">📍</div>
-                            <div class="info-content">
-                                <h4>الموقع</h4>
-                                <p>صنعاء، الجمهورية اليمنية</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="margin-top: 2rem;">
-                        <h4 style="color: #1a3a52; margin-bottom: 1rem;">المناصب الحالية</h4>
-                        <ul class="positions-list">
-                            <li><span>سكرتير منظمة هود للدفاع عن الحقوق والحريات</span> <span class="year">2008</span></li>
-                            <li><span>رئيس تحالف إب الحقوقي</span> <span class="year">2011</span></li>
-                            <li><span>رئيس المنظمة الوطنية لمناصرة المغتربين اليمنيين</span> <span class="year">2014</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="about">
+    <h2 class="section-title">من نحن</h2>
+    <div class="about">
+      <p>
+        المحامي علي عبد الله قاسم السنحاني (أبو محمد) هو محامٍ ومستشار قانوني يمني بخبرة تزيد عن ستة عشر عامًا،
+        وعضو في نقابة المحامين اليمنيين، ويجمع بين الخبرة القانونية والعمل الحقوقي والقيادة المجتمعية.
+      </p>
+      <p>
+        يتميز بخبرة في القضايا المدنية والتجارية، وصياغة العقود، وتأسيس الشركات، مع التزام كامل بالنزاهة
+        والسرية المهنية والدفاع عن الحقوق.
+      </p>
+    </div>
+  </section>
 
-    <!-- Values Section -->
-    <section class="values-section">
-        <div class="container">
-            <h2>القيم الأساسية</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="icon">⚖️</div>
-                    <h3>العدالة</h3>
-                    <p>إيمان راسخ بحق الجميع في المساواة القانونية</p>
-                </div>
-                <div class="value-card">
-                    <div class="icon">🕊️</div>
-                    <h3>الاستقلالية</h3>
-                    <p>صوت حر لا يُشترى</p>
-                </div>
-                <div class="value-card">
-                    <div class="icon">✊</div>
-                    <h3>الولاء للحق</h3>
-                    <p>الانتصار للضعيف والوقوف في وجه الباطل</p>
-                </div>
-                <div class="value-card">
-                    <div class="icon">🤝</div>
-                    <h3>المسؤولية المجتمعية</h3>
-                    <p>انخراط عميق في الدفاع عن حقوق الإنسان والمغتربين</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="services">
+    <h2 class="section-title">الخدمات القانونية</h2>
+    <div class="services">
+      <div class="card">
+        <h3>القضايا المدنية</h3>
+        <p>التمثيل القانوني في النزاعات المدنية ومتابعة إجراءات التقاضي باحترافية.</p>
+      </div>
+      <div class="card">
+        <h3>القضايا التجارية</h3>
+        <p>تقديم الحلول القانونية للمنازعات التجارية وقضايا الشركات والأعمال.</p>
+      </div>
+      <div class="card">
+        <h3>صياغة العقود</h3>
+        <p>إعداد ومراجعة العقود القانونية بمختلف أنواعها وفق أسس قانونية دقيقة.</p>
+      </div>
+      <div class="card">
+        <h3>تأسيس الشركات</h3>
+        <p>تأسيس الشركات وإعداد هياكلها القانونية وفق الأنظمة اليمنية والسعودية.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2>الخدمات المتخصصة</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon">📋</div>
-                    <h3>القانون التجاري</h3>
-                    <p>تأسيس وتوثيق الشركات، العقود التجارية، قضايا الشركات</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">👨‍👩‍👧‍👦</div>
-                    <h3>القانون العائلي</h3>
-                    <p>قضايا الأحوال الشخصية، الوصايا، الوراثة، الدستور العائلي</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">🌍</div>
-                    <h3>شؤون المغتربين</h3>
-                    <p>استشارات قانونية للمغتربين اليمنيين في الخارج</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">💼</div>
-                    <h3>الاستشارات القانونية</h3>
-                    <p>استشارات قانونية متخصصة في مختلف المجالات</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">⚖️</div>
-                    <h3>التمثيل القضائي</h3>
-                    <p>تمثيل أمام الجهات القضائية والمحاكم</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">📄</div>
-                    <h3>صياغة العقود</h3>
-                    <p>صياغة واستخراج العقود والوثائق القانونية</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="whyus">
+    <h2 class="section-title">لماذا نحن</h2>
+    <div class="features">
+      <div class="card">
+        <h3>خبرة طويلة</h3>
+        <p>أكثر من 16 عامًا من العمل القانوني والحقوقي.</p>
+      </div>
+      <div class="card">
+        <h3>سرية تامة</h3>
+        <p>نلتزم بالحفاظ على خصوصية الموكلين وسرية المعلومات.</p>
+      </div>
+      <div class="card">
+        <h3>احترافية عالية</h3>
+        <p>معالجة دقيقة للقضايا والعقود والاستشارات القانونية.</p>
+      </div>
+      <div class="card">
+        <h3>استجابة سريعة</h3>
+        <p>سهولة التواصل وسرعة المتابعة مع العملاء.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Pleas Section -->
-    <section id="pleas" class="pleas-section">
-        <div class="container">
-            <h2>مرافعات قانونية</h2>
-            
-            <!-- Disclaimer Section -->
-            <div style="background-color: #fff3cd; border: 2px solid #ffc107; border-radius: 10px; padding: 2rem; margin-bottom: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
-                <h3 style="color: #856404; margin-bottom: 1rem; text-align: right;">⚠️ إخلاء مسؤولية قانوني وتنبيه مهم</h3>
-                <div style="color: #856404; text-align: right; line-height: 1.8; font-size: 0.95rem;">
-                    <p><strong>1. الغرض التثقيفي والأرشفة:</strong> المرافعات المنشورة على هذا الموقع تُنشر لأغراض تثقيفية وأرشفة قانونية فقط، وليست بأي حال من الأحوال استشارة قانونية ملزمة أو رأي قانوني متخصص لحالتك الشخصية.</p>
-                    <p><strong>2. حقوق النشر والملكية الفكرية:</strong> جميع المرافعات والمحتوى القانوني المنشور على هذا الموقع هو ملك فكري خاص بمكتب المحامي علي السنحاني، ولا يجوز إعادة نشره أو استخدامه دون إذن كتابي صريح من المكتب.</p>
-                    <p><strong>3. السرية والخصوصية:</strong> رغم جهودنا في حماية خصوصية الأطراف، يُنصح بعدم الاعتماد على هذه المرافعات كمرجع قانوني مباشر في قضايا شخصية دون استشارة محامٍ متخصص.</p>
-                    <p><strong>4. عدم التزام المكتب:</strong> المكتب غير مسؤول عن أي استخدام غير صحيح أو إساءة استخدام للمحتوى المنشور.</p>
-                </div>
-            </div>
-            
-            <!-- Video Section -->
-            <div class="plea-card" style="margin-bottom: 3rem;">
-                <div class="icon" style="font-size: 3rem; margin-bottom: 1rem;">🎬</div>
-                <h3>فيديو توضيحي</h3>
-                <p>مقطع فيديو توضيحي من مكتب المحامي علي السنحاني</p>
-                
-                <div style="margin-top: 1.5rem;">
-                    <video controls style="width: 100%; border-radius: 5px; max-height: 500px;">
-                        <source src="video.mp4" type="video/mp4">
-                        متصفحك لا يدعم تشغيل الفيديوهات.
-                    </video>
-                </div>
-            </div>
-            
-            <!-- Plea 1 -->
-            <div class="plea-card">
-                <div class="icon" style="font-size: 3rem; margin-bottom: 1rem;">🎙️</div>
-                <h3>المرافعة الأولى: قضية قتل (وكيل أولياء الدم)</h3>
-                <p>استمع إلى مرافعة قانونية جنائية قدمها المحامي علي السنحاني في قضية قتل، ترافَعَ فيها بصفته وكيلاً لورثة أولياء الدم.</p>
-                
-                <div style="margin-top: 1.5rem;">
-                    <h4 style="color: #1a3a52; margin-bottom: 1rem; text-align: right;">🎧 المقطع الصوتي</h4>
-                    <audio controls style="width: 100%; border-radius: 5px;">
-                        <source src="plea.mp3" type="audio/mpeg">
-                        متصفحك لا يدعم تشغيل الملفات الصوتية.
-                    </audio>
-                </div>
-                
-                <div class="plea-text-container">
-                    <button class="plea-toggle-btn" onclick="togglePleaText('pleaTextContent1', this)">📄 اعرض النص المكتوب</button>
-                    <div class="plea-text-content" id="pleaTextContent1">
-                        <h4 style="color: #1a3a52; margin-bottom: 1.5rem; text-align: right;">مرافعة المحامي علي السنحاني في قضية قتل (1)</h4>
-                        <p><strong>الحمد لله القائل:</strong> "من قتل مظلوماً فقد جعلنا لوليه سلطانة"</p>
-                        <p><strong>وقال رسول الله صلى الله عليه وسلم:</strong> "لزوال الدنيا أهون عند الله من قتل رجل مسلم"</p>
-                        <p>وهذه النصوص الشرعية تؤسس لمبدأ عظيم في العدالة، وهو حق ولي الدم في المطالبة بالقصاص بوصفه حقاً مكفولاً شرعاً وقانوناً، غايته إقامة العدل وردع الجناة وصيانة المجتمع من تكرار الجريمة.</p>
-                        <p>وعليه، فإن سلامة الإجراءات وصحة البيانات نؤكد لعدالتك الموقرة أن جميع الإجراءات المتخذة أمام القاضي السابق، وكذلك الشهادات التي أديت في حينه قد تمت وفق الأصول الشرعية والقانونية المرعية، وثبتت بمحاضر رسمية صحيحة.</p>
-                        <p>وإننا نعتبر هذه المحاضر جزءاً لا يتجزأ من ملف الدعوى، فإنها تشكل بيانات قائمة بذاتها يجب الاعتماد عليها والاعتداد بها، ولا يجوز إهدارها أو تجاوز ما تضمنته من وقائع ثابتة ومستقرة.</p>
-                        <p>كما أحب أن ألفت عدالة المحكمة الكريمة أنه قد سبق وأن صدر حكم بالقصاص الشرعي بحق المتهم الماثل أمام عدالتكم، وذلك خلال الفترة التي كان فيها فاراً من وجه العدالة، وإننا نتمسك بهذا الحكم وما تضمنه من أسباب ووقائع، ونعتبره دليلاً قضائياً قائماً بذاته يعزز ما هو مستقر في أوراق الدعوى ويتكامل مع ما تم سماعه ومناقشته أمام عدالتكم الموقرة.</p>
-                        <p>كما جاءت شهادة الشهود سواء التي أديت سابقاً أو التي أعيد سماعها أمام عدالتكم متوافقة في جوهرها، متساندة في دلالتها، خالية من أي تناقض، وقد ثبت الفعل الإجرامي بتحديد قاطع بما لا يترك مجالاً للشك أو الاحتمال.</p>
-                        <p><strong>وعليه، نطلب من عدالة محكمتكم الموقرة الحكم بالقصاص الشرعي في حق المتهم لارتكابه جريمة القتل العمد في حق المجني عليه علي أحمد الصوفي.</strong></p>
-                        <p>كما نطلب الأغرام والمخاسر وكل ما تضمنته دعوانا بالحق الشخصي والحق المدني أمام عدالة محكمتكم الموقرة.</p>
-                    </div>
-                </div>
-            </div>
+  <section id="contact">
+    <h2 class="section-title">تواصل معنا</h2>
+    <div class="contact-box contact-info">
+      <p><strong>📍 العنوان:</strong> الجمهورية اليمنية – أمانة العاصمة صنعاء</p>
+      <p><strong>📞 الهاتف:</strong> 00967733163848</p>
+      <p><strong>📧 البريد الإلكتروني:</strong> alsnhany@gmail.com / alsnhany@hotmail.com</p>
+      <p><strong>🕒 أوقات التواصل:</strong> يوميًا حسب المواعيد المسبقة</p>
+      <p>
+        <a class="btn" href="https://wa.me/967733163848" target="_blank">راسلنا عبر واتساب</a>
+      </p>
+    </div>
+  </section>
 
-            <!-- Plea 2 -->
-            <div class="plea-card">
-                <div class="icon" style="font-size: 3rem; margin-bottom: 1rem;">⚖️</div>
-                <h3>المرافعة الثانية: قضية قتل (وكيل أولياء الدم)</h3>
-                <p>مرافعة جنائية ثانية للمحامي علي السنحاني، يفند فيها شهادات النفي ويتمسك بطلبات أولياء الدم بالقصاص الشرعي.</p>
-                
-                <div style="margin-top: 1.5rem;">
-                    <h4 style="color: #1a3a52; margin-bottom: 1rem; text-align: right;">🎧 المقطع الصوتي</h4>
-                    <audio controls style="width: 100%; border-radius: 5px;">
-                        <source src="plea2.mp3" type="audio/mpeg">
-                        متصفحك لا يدعم تشغيل الملفات الصوتية.
-                    </audio>
-                </div>
-                
-                <div class="plea-text-container">
-                    <button class="plea-toggle-btn" onclick="togglePleaText('pleaTextContent2', this)">📄 اعرض النص المكتوب</button>
-                    <div class="plea-text-content" id="pleaTextContent2">
-                        <h4 style="color: #1a3a52; margin-bottom: 1.5rem; text-align: right;">مرافعة المحامي علي السنحاني في قضية قتل (2)</h4>
-                        <p>نحن اليوم أمام شهادة لم تكن عابرة، بل أريد لها أن تكون أداة تضليل، غير أن التناقض الذي اعترى بنيانها أسقطها بنفسها وبدد دعائمها وظهر زيفها وانكشفت حقيقتها.</p>
-                        <p>لقد زعم الشهود أن المتهم كان برفقتهم أثناء تناول وجبة الغداء، وأنه تلقى أثناء ذلك اتصالاً على هاتفه المحمول، غير أن المتهم بنفسه وبلسانه أمام عدالة المحكمة نفى حيازته لهاتف محمول أو سيار، وقرر صراحة أمام عدالتكم أنه تلقى اتصالاً من هاتف ثابت إلى هاتف ثابت يتبع جهاز الأمن والمخابرات (حسب قوله).</p>
-                        <p>وهنا نكون أمام تصريح نسف شهادة النفي من أصلها. بل إن الأمر لم يتوقف عند هذا الحد، إذ سُئل المتهم: كيف عرفت والدتك برقم الهاتف الثابت وهو يتبع جهاز الأمن والمخابرات؟ فامتنع عن الجواب، وهذا ثابت في محضر الجلسة. فكيف عرفت والدته برقم جهة العمل وهو يقول أنها جهة أمنية استخبارية؟ فهل تُقبل شهادة هذا حالها؟</p>
-                        <p>علاوة على ذلك، فإن الشاهدين أقرا بأنهما لا يعلمان برقم الهاتف عندما سُئلا من قبل المحكمة. أما نحن فقد قدمنا أمام عدالة المحكمة شهادة ثلاثة شهود عدول برؤية مباشرة وسرد متطابق وتفاصيل دقيقة متماسكة يعضدها دليل مادي واضح لا لبس فيه ولا غموض.</p>
-                        <p><strong>وعليه، فإننا نطلب من عدالة المحكمة إدانة المتهم والحكم عليه بالقصاص الشرعي، متمسكين بالحكم الغيابي السابق.</strong> إن ما جاء في رد محامي المتهم على الشهود المحضرين من قبلنا هو عبارة عن أقوال مرسلة لا أثر لها، حيث أن العبرة ليست بمجرد القول بتواجد المتهم في مقر عمله، بل بالدليل القاطع. إن القضية هي قضية دم بين أولياء الدم والجناة، وعليه فإننا نتمسك بطلباتنا العادلة.</p>
-                    </div>
-                </div>
-            </div>
+  <footer>
+    <p>© جميع الحقوق محفوظة - مكتب المحامي علي عبد الله قاسم السنحاني</p>
+  </footer>
 
-            <script>
-                function togglePleaText(id, button) {
-                    const textContent = document.getElementById(id);
-                    textContent.classList.toggle('active');
-                    
-                    if (textContent.classList.contains('active')) {
-                        button.textContent = '📄 إخفاء النص المكتوب';
-                    } else {
-                        button.textContent = '📄 اعرض النص المكتوب';
-                    }
-                }
-            </script>
-        </div>
-    </section>
+  <a class="whatsapp-float" href="https://wa.me/967733163848" target="_blank">واتساب</a>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>تواصل معي</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                أنا هنا لمساعدتك في جميع احتياجاتك القانونية. لا تتردد في التواصل معي للاستشارة أو الاستفسار عن أي خدمة.
-            </p>
-            <div class="contact-buttons">
-                <a href="tel:+967733163848" class="btn btn-primary">
-                    📞 اتصل الآن
-                </a>
-                <a href="mailto:alsnhany@hotmail.com" class="btn btn-secondary">
-                    ✉️ أرسل بريد
-                </a>
-                <a href="https://wa.me/967733163848" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-                    💬 واتس آب
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2025–2026 مكتب المحامي علي عبدالله السنحاني. جميع الحقوق محفوظة.</p>
-            <p style="font-size: 0.9rem; color: #999; margin-top: 1rem;">الموقع الرسمي لمكتب المحامي علي السنحاني للاستشارات القانونية</p>
-        </div>
-    </footer>
 </body>
-<!-- Updated: 2026-02-04 -->
 </html>
