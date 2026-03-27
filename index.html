@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مكتب المحامي علي السنحاني</title>
-  <meta name="description" content="مكتب المحامي علي عبد الله قاسم السنحاني - استشارات قانونية، قضايا مدنية وتجارية، وصياغة عقود وفق الأنظمة اليمنية والسعودية." />
+  <title>مكتب المحامي علي السنحاني - استشارات قانونية ومرافعات</title>
+  <meta name="description" content="مكتب المحامي علي عبد الله قاسم السنحاني - استشارات قانونية، قضايا مدنية وتجارية، مرافعات صوتية ومرئية، وصياغة عقود." />
   <style>
     * {
       box-sizing: border-box;
@@ -82,6 +82,11 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .btn:hover {
+        background: #b8962d;
     }
 
     section {
@@ -107,16 +112,16 @@
       margin: 10px auto 0;
     }
 
-    .about, .contact-box {
+    .about, .contact-box, .media-container {
       background: white;
       padding: 30px;
       border-radius: 14px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.07);
     }
 
-    .services, .features {
+    .services, .features, .media-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       margin-top: 25px;
     }
@@ -133,6 +138,26 @@
       color: #111827;
       margin-bottom: 12px;
       font-size: 20px;
+    }
+
+    /* Media Styles */
+    .media-card {
+        background: #fdfdfd;
+        border: 1px solid #eee;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+    }
+    
+    .media-card h3 {
+        color: #1a3a52;
+        margin-bottom: 15px;
+    }
+    
+    .media-card video, .media-card audio {
+        width: 100%;
+        margin-bottom: 15px;
+        border-radius: 8px;
     }
 
     .contact-info p {
@@ -159,6 +184,7 @@
       text-decoration: none;
       font-weight: bold;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 1001;
     }
 
     @media (max-width: 768px) {
@@ -180,6 +206,7 @@
       <ul>
         <li><a href="#about">من نحن</a></li>
         <li><a href="#services">الخدمات</a></li>
+        <li><a href="#pleas">المرافعات</a></li>
         <li><a href="#whyus">لماذا نحن</a></li>
         <li><a href="#contact">تواصل معنا</a></li>
       </ul>
@@ -232,6 +259,39 @@
     </div>
   </section>
 
+  <!-- Media Section Added Back -->
+  <section id="pleas">
+    <h2 class="section-title">المرافعات القانونية والوسائط</h2>
+    <div class="media-container">
+        <p style="text-align: center; margin-bottom: 20px; color: #666;">توثيق لمرافعاتنا القانونية واستشاراتنا المسجلة لضمان الشفافية ونشر الوعي القانوني.</p>
+        <div class="media-grid">
+            <!-- Video Section -->
+            <div class="media-card">
+                <h3>المرافعة المرئية</h3>
+                <video controls poster="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=400&q=80">
+                    <source src="video.mp4" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+                <p>شاهد المرافعة الكاملة</p>
+            </div>
+            <!-- Audio Section -->
+            <div class="media-card">
+                <h3>المرافعة الصوتية</h3>
+                <audio controls>
+                    <source src="audio.mp3" type="audio/mpeg">
+                    متصفحك لا يدعم تشغيل الصوت.
+                </audio>
+                <p>استمع للمرافعة الصوتية</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <p style="font-size: 0.9rem; color: #888; border-top: 1px solid #eee; padding-top: 15px;">
+                ⚠️ تنبيه قانوني: جميع المواد الصوتية والمرئية المعروضة هنا هي ملكية فكرية خاصة بمكتب المحامي علي السنحاني، ويُمنع إعادة نشرها أو استخدامها دون إذن خطي مسبق.
+            </p>
+        </div>
+    </div>
+  </section>
+
   <section id="whyus">
     <h2 class="section-title">لماذا نحن</h2>
     <div class="features">
@@ -268,7 +328,7 @@
   </section>
 
   <footer>
-    <p>© جميع الحقوق محفوظة - مكتب المحامي علي عبد الله قاسم السنحاني</p>
+    <p>© 2026 جميع الحقوق محفوظة - مكتب المحامي علي عبد الله قاسم السنحاني</p>
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/967733163848" target="_blank">واتساب</a>
