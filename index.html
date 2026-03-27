@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مكتب المحامي علي السنحاني - استشارات قانونية ومرافعات</title>
-  <meta name="description" content="مكتب المحامي علي عبد الله قاسم السنحاني - استشارات قانونية، قضايا مدنية وتجارية، مرافعات صوتية ومرئية، وصياغة عقود." />
+  <title>مكتب المحامي علي السنحاني - استشارات قانونية، مرافعات جنائية ومدنية</title>
+  <meta name="description" content="مكتب المحامي علي عبد الله قاسم السنحاني - خبرة 16 عاماً في القضايا الجنائية والمدنية والتجارية، صياغة عقود احترافية وتأسيس شركات في اليمن والسعودية." />
+  <meta name="keywords" content="محامي يمني، محامي في صنعاء، استشارات قانونية، قضايا جنائية، صياغة عقود، تأسيس شركات، علي السنحاني" />
   <style>
     * {
       box-sizing: border-box;
@@ -17,6 +18,7 @@
       background: #f8f8f8;
       color: #1f1f1f;
       line-height: 1.8;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -26,6 +28,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
 
     nav {
@@ -36,59 +39,69 @@
     }
 
     nav h1 {
-      font-size: 22px;
+      font-size: 24px;
       color: #d4af37;
+      font-weight: bold;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 20px;
+      gap: 25px;
       flex-wrap: wrap;
     }
 
     nav ul li a {
       color: white;
       text-decoration: none;
-      font-size: 15px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    
+    nav ul li a:hover {
+        color: #d4af37;
     }
 
     .hero {
-      background: linear-gradient(rgba(17,24,39,0.88), rgba(17,24,39,0.88)),
+      background: linear-gradient(rgba(17,24,39,0.9), rgba(17,24,39,0.9)),
                   url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1400&q=80') center/cover;
       color: white;
       text-align: center;
-      padding: 120px 20px;
+      padding: 140px 20px;
     }
 
     .hero h2 {
-      font-size: 45px;
+      font-size: 50px;
       margin-bottom: 25px;
       color: #d4af37;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
     .hero p {
-      max-width: 800px;
-      margin: 0 auto 30px;
-      font-size: 20px;
+      max-width: 850px;
+      margin: 0 auto 35px;
+      font-size: 22px;
+      opacity: 0.95;
     }
 
     .btn {
       display: inline-block;
       background: #d4af37;
       color: #111827;
-      padding: 14px 28px;
-      margin: 10px;
+      padding: 16px 32px;
+      margin: 12px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       transition: 0.3s;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      font-size: 1.1rem;
     }
     
     .btn:hover {
         background: #b8962d;
-        transform: translateY(-2px);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     }
 
     .btn-secondary {
@@ -103,15 +116,15 @@
     }
 
     section {
-      padding: 80px 20px;
-      max-width: 1100px;
+      padding: 100px 20px;
+      max-width: 1200px;
       margin: auto;
     }
 
     .section-title {
-      font-size: 36px;
+      font-size: 40px;
       color: #111827;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       text-align: center;
       position: relative;
     }
@@ -119,116 +132,142 @@
     .section-title::after {
       content: "";
       display: block;
-      width: 100px;
-      height: 4px;
+      width: 120px;
+      height: 5px;
       background: #d4af37;
-      margin: 12px auto 0;
+      margin: 15px auto 0;
     }
 
-    .about, .contact-box, .media-container {
+    .content-box {
       background: white;
-      padding: 40px;
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.06);
     }
 
-    .services, .features, .media-grid {
+    .grid-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 35px;
+      margin-top: 40px;
     }
 
     .card {
       background: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-      border-top: 5px solid #d4af37;
-      transition: 0.3s;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border-top: 6px solid #d4af37;
+      transition: 0.4s;
     }
     
     .card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-8px);
+        box-shadow: 0 15px 45px rgba(0,0,0,0.1);
     }
 
     .card h3 {
       color: #111827;
-      margin-bottom: 15px;
-      font-size: 22px;
+      margin-bottom: 18px;
+      font-size: 24px;
     }
 
     /* Media Styles */
     .media-card {
         background: #ffffff;
         border: 1px solid #f0f0f0;
-        padding: 25px;
-        border-radius: 18px;
+        padding: 30px;
+        border-radius: 20px;
         text-align: center;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.02);
     }
     
     .media-card h3 {
         color: #111827;
-        margin-bottom: 10px;
-        font-size: 20px;
+        margin-bottom: 12px;
+        font-size: 22px;
     }
     
     .media-card .media-subtitle {
         color: #d4af37;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         display: block;
+        font-size: 1.1rem;
     }
     
     .media-card video, .media-card audio {
         width: 100%;
-        margin-bottom: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.12);
     }
 
-    .btn-small {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-        margin-top: 15px;
+    /* Success Stories Styles */
+    .success-stories {
+        background: #111827;
+        color: white;
+        padding: 80px 20px;
+        margin-top: 40px;
+        border-radius: 25px;
+    }
+    
+    .success-stories h2 {
+        color: #d4af37;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .story-item {
+        background: rgba(255,255,255,0.05);
+        padding: 25px;
+        border-right: 4px solid #d4af37;
+        margin-bottom: 20px;
+        border-radius: 0 12px 12px 0;
+    }
+    
+    .story-item h4 {
+        color: #d4af37;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
     }
 
     .contact-info p {
-      margin-bottom: 15px;
-      font-size: 18px;
+      margin-bottom: 20px;
+      font-size: 19px;
     }
 
     footer {
       background: #111827;
       color: white;
       text-align: center;
-      padding: 40px 20px;
-      margin-top: 40px;
+      padding: 50px 20px;
+      margin-top: 50px;
     }
 
     .whatsapp-float {
       position: fixed;
-      bottom: 25px;
-      left: 25px;
+      bottom: 30px;
+      left: 30px;
       background: #25D366;
       color: white;
-      padding: 15px 20px;
+      padding: 18px 25px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
       z-index: 1001;
       transition: 0.3s;
+      font-size: 1.1rem;
     }
     
     .whatsapp-float:hover {
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
 
     @media (max-width: 768px) {
       .hero h2 {
-        font-size: 32px;
+        font-size: 36px;
       }
       
       header {
@@ -238,6 +277,10 @@
       nav {
         gap: 15px;
         justify-content: center;
+      }
+      
+      .content-box {
+          padding: 30px 20px;
       }
     }
   </style>
@@ -251,6 +294,7 @@
         <li><a href="#about">من نحن</a></li>
         <li><a href="#services">الخدمات</a></li>
         <li><a href="#pleas">المرافعات</a></li>
+        <li><a href="#results">النتائج</a></li>
         <li><a href="#contact">تواصل معنا</a></li>
       </ul>
     </nav>
@@ -259,115 +303,132 @@
   <section class="hero">
     <h2>استشارات قانونية باحترافية وسرية تامة</h2>
     <p>
-      خبرة تزيد عن 16 عاماً في القضايا المدنية والتجارية، وصياغة العقود، وتأسيس الشركات وفق الأنظمة اليمنية والسعودية.
+      خبرة تزيد عن 16 عاماً في القضايا الجنائية والمدنية والتجارية، وصياغة العقود، وتأسيس الشركات وفق الأنظمة اليمنية والسعودية.
     </p>
-    <a class="btn" href="#contact">احجز استشارة قانونية الآن</a>
+    <a class="btn" href="#contact">احجز استشارة قانونية فورية</a>
     <a class="btn btn-secondary" href="https://wa.me/967733163848" target="_blank">تواصل عبر واتساب</a>
   </section>
 
   <section id="about">
     <h2 class="section-title">من نحن</h2>
-    <div class="about">
-      <p style="font-size: 1.1rem; margin-bottom: 20px;">
+    <div class="content-box">
+      <p style="font-size: 1.2rem; margin-bottom: 25px;">
         المحامي علي عبد الله قاسم السنحاني (أبو محمد) هو محامٍ ومستشار قانوني يمني بخبرة تزيد عن ستة عشر عامًا،
-        وعضو في نقابة المحامين اليمنيين، ويجمع بين الخبرة القانونية والعمل الحقوقي والقيادة المجتمعية.
+        وعضو في نقابة المحامين اليمنيين. يجمع مكتبنا بين الخبرة القانونية العميقة والعمل الحقوقي الملتزم والقيادة المجتمعية الرشيدة.
       </p>
-      <p style="font-size: 1.1rem;">
-        يتميز بخبرة في القضايا المدنية والتجارية، وصياغة العقود، وتأسيس الشركات، مع التزام كامل بالنزاهة
-        والسرية المهنية والدفاع عن الحقوق.
+      <p style="font-size: 1.2rem;">
+        نحن نؤمن بأن المحاماة رسالة قبل أن تكون مهنة، ولذلك نضع النزاهة والسرية المهنية والدفاع المستميت عن حقوق موكلينا فوق كل اعتبار. متخصصون في حل القضايا المعقدة وتقديم استشارات قانونية وقائية تمنع النزاعات قبل وقوعها.
       </p>
     </div>
   </section>
 
   <section id="services">
-    <h2 class="section-title">الخدمات القانونية</h2>
-    <div class="services">
+    <h2 class="section-title">الخدمات القانونية المتخصصة</h2>
+    <div class="grid-container">
       <div class="card">
-        <h3>القضايا المدنية</h3>
-        <p>التمثيل القانوني في النزاعات المدنية ومتابعة إجراءات التقاضي باحترافية تامة لضمان حقوق الموكلين.</p>
+        <h3>⚖️ القضايا الجنائية والمدنية</h3>
+        <p>تمثيل قانوني قوي في النزاعات الجنائية والمدنية ومتابعة دقيقة لكافة إجراءات التقاضي لضمان العدالة الناجزة.</p>
       </div>
       <div class="card">
-        <h3>القضايا التجارية</h3>
-        <p>تقديم الحلول القانونية للمنازعات التجارية وقضايا الشركات والأعمال وحماية المصالح الاستثمارية.</p>
+        <h3>🏢 القضايا التجارية والشركات</h3>
+        <p>حلول قانونية مبتكرة للمنازعات التجارية وحماية المصالح الاستثمارية وتأسيس الشركات وهيكلتها قانونياً.</p>
       </div>
       <div class="card">
-        <h3>صياغة العقود</h3>
-        <p>إعداد ومراجعة العقود القانونية بمختلف أنواعها وفق أسس قانونية دقيقة تمنع النزاعات المستقبلية.</p>
+        <h3>📝 صياغة العقود والاتفاقيات</h3>
+        <p>إعداد ومراجعة العقود القانونية بمختلف أنواعها وفق أحدث الأنظمة لضمان أعلى درجات الحماية القانونية.</p>
       </div>
       <div class="card">
-        <h3>تأسيس الشركات</h3>
-        <p>تأسيس الشركات وإعداد هياكلها القانونية وتسجيلها وفق الأنظمة المتبعة في اليمن والسعودية.</p>
+        <h3>🌍 شؤون المغتربين</h3>
+        <p>تقديم الدعم القانوني الكامل للمغتربين اليمنيين في الخارج ومتابعة قضاياهم ومصالحهم داخل الوطن.</p>
       </div>
     </div>
   </section>
 
-  <!-- Media Section - Enhanced based on user feedback -->
   <section id="pleas">
     <h2 class="section-title">المرافعات القانونية والوسائط</h2>
-    <div class="media-container">
-        <p style="text-align: center; margin-bottom: 30px; color: #555; font-size: 1.1rem;">توثيق حي لمرافعاتنا واستشاراتنا لضمان الشفافية ونشر الوعي القانوني.</p>
-        <div class="media-grid">
+    <div class="content-box">
+        <p style="text-align: center; margin-bottom: 40px; color: #555; font-size: 1.2rem;">توثيق حي يبرز قوة الحجة والتمكن القانوني لمكتبنا في الدفاع عن الحقوق.</p>
+        <div class="grid-container">
             <!-- Video Section -->
             <div class="media-card">
                 <h3>المرافعة المرئية</h3>
-                <span class="media-subtitle">🎥 مرافعة نموذجية في قضية جنائية</span>
+                <span class="media-subtitle">🎥 مرافعة نموذجية تبرز قوة الحجة القانونية</span>
                 <video controls poster="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=400&q=80">
                     <source src="video.mp4" type="video/mp4">
                     متصفحك لا يدعم تشغيل الفيديو.
                 </video>
-                <p>هل لديك قضية مشابهة؟</p>
-                <a class="btn btn-small" href="https://wa.me/967733163848?text=السلام عليكم، شاهدت مرافعتكم المرئية وأود استشارة في قضية مشابهة" target="_blank">استشرنا عبر واتساب</a>
+                <p style="font-weight: bold; color: #111827;">هل لديك قضية تتطلب دفاعاً قوياً؟</p>
+                <a class="btn" style="padding: 10px 20px; font-size: 1rem;" href="https://wa.me/967733163848?text=السلام عليكم، شاهدت مرافعتكم المرئية وأود استشارة في قضية مشابهة" target="_blank">استشرنا الآن عبر واتساب</a>
             </div>
             <!-- Audio Section -->
             <div class="media-card">
                 <h3>المرافعة الصوتية</h3>
-                <span class="media-subtitle">🎧 استشارة قانونية صوتية مسجلة</span>
+                <span class="media-subtitle">🎧 استشارة قانونية مسجلة ونشر وعي</span>
                 <audio controls>
                     <source src="audio.mp3" type="audio/mpeg">
                     متصفحك لا يدعم تشغيل الصوت.
                 </audio>
-                <p>هل تحتاج لاستشارة صوتية؟</p>
-                <a class="btn btn-small" href="https://wa.me/967733163848?text=السلام عليكم، استمعت للمرافعة الصوتية وأود حجز استشارة خاصة" target="_blank">اطلب استشارتك الآن</a>
+                <p style="font-weight: bold; color: #111827;">هل تحتاج لرأي قانوني سديد؟</p>
+                <a class="btn" style="padding: 10px 20px; font-size: 1rem;" href="https://wa.me/967733163848?text=السلام عليكم، استمعت للمرافعة الصوتية وأود حجز استشارة خاصة" target="_blank">اطلب استشارتك الصوتية</a>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 40px;">
-            <p style="font-size: 0.95rem; color: #888; border-top: 1px solid #eee; padding-top: 20px;">
-                🛡️ <strong>تنبيه قانوني:</strong> جميع المواد المعروضة هي ملكية فكرية لمكتب المحامي علي السنحاني. يُمنع الاقتباس أو النشر دون إذن.
-            </p>
+    </div>
+  </section>
+
+  <!-- Success Results Section - The "Diamond" addition -->
+  <section id="results">
+    <div class="success-stories">
+        <h2>🏆 نتائج مشرفة ونماذج نجاح</h2>
+        <div style="max-width: 900px; margin: auto;">
+            <div class="story-item">
+                <h4>القضايا الجنائية</h4>
+                <p>تحقيق البراءة وتخفيف الأحكام في قضايا جنائية معقدة بفضل قوة الدفع القانوني والمرافعات المحكمة.</p>
+            </div>
+            <div class="story-item">
+                <h4>القضايا التجارية</h4>
+                <p>استرداد حقوق مالية ضخمة لموكلين في نزاعات تجارية بين شركات كبرى وتوثيق صفقات استثمارية ناجحة.</p>
+            </div>
+            <div class="story-item">
+                <h4>صياغة العقود</h4>
+                <p>حماية استثمارات عقارية وتجارية من خلال صياغة عقود وقائية منعت نزاعات قضائية كانت وشيكة.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a class="btn btn-secondary" href="#contact">كن قصة النجاح القادمة - تواصل معنا</a>
         </div>
     </div>
   </section>
 
   <section id="whyus">
-    <h2 class="section-title">لماذا نحن</h2>
-    <div class="features">
+    <h2 class="section-title">لماذا يختارنا الموكلون؟</h2>
+    <div class="grid-container">
       <div class="card">
-        <h3>خبرة طويلة</h3>
-        <p>أكثر من 16 عاماً من العمل القانوني والحقوقي والقيادة المجتمعية.</p>
+        <h3>✅ خبرة تتجاوز 16 عاماً</h3>
+        <p>تراكم معرفي وعملي في مختلف المحاكم والجهات القضائية يضمن لك أفضل تمثيل.</p>
       </div>
       <div class="card">
-        <h3>سرية تامة</h3>
-        <p>نلتزم بأعلى معايير الخصوصية والسرية المهنية لجميع الموكلين.</p>
+        <h3>✅ التزام مطلق بالسرية</h3>
+        <p>خصوصية موكلينا مقدسة، ونطبق أعلى معايير السرية المهنية في تداول المعلومات.</p>
       </div>
       <div class="card">
-        <h3>احترافية عالية</h3>
-        <p>معالجة دقيقة وعلمية لكافة القضايا والاستشارات القانونية المعقدة.</p>
+        <h3>✅ احترافية ومتابعة دقيقة</h3>
+        <p>لا نترك ثغرة قانونية، ونتابع قضايا الموكلين لحظة بلحظة مع تواصل مستمر.</p>
       </div>
       <div class="card">
-        <h3>استجابة سريعة</h3>
-        <p>فريقنا مكرس للمتابعة الدقيقة والتواصل الفعال مع العملاء على مدار الساعة.</p>
+        <h3>✅ نتائج ملموسة</h3>
+        <p>سجل حافل بالنجاحات في أصعب القضايا القانونية والحقوقية في اليمن.</p>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2 class="section-title">تواصل معنا</h2>
-    <div class="contact-box contact-info">
+    <h2 class="section-title">ابدأ استشارتك القانونية الآن</h2>
+    <div class="content-box contact-info" style="text-align: center;">
       <p><strong>📍 العنوان:</strong> الجمهورية اليمنية – أمانة العاصمة صنعاء</p>
-      <p><strong>📞 الهاتف:</strong> 00967733163848</p>
-      <p><strong>📧 البريد الإلكتروني:</strong> alsnhany@gmail.com / alsnhany@hotmail.com</p>
-      <p><strong>🕒 أوقات التواصل:</strong> يومياً حسب المواعيد المسبقة</p>
-      <div style="margin-top: 25px;">
+      <p><strong>📞 الهاتف المباشر:</strong> 00967733163848</p>
+      <p><strong>📧 البريد الرسمي:</strong> alsnhany@gmail.com / alsnhany@hotmail.com</p>
+      <p><strong>🕒 أوقات العمل:</strong> نستقبل استفساراتكم على مدار الساعة عبر واتساب</p>
+      <div style="margin-top: 35px;">
         <a class="btn" href="https://wa.me/967733163848" target="_blank">راسلنا الآن عبر واتساب</a>
       </div>
     </div>
@@ -375,10 +436,13 @@
 
   <footer>
     <p>© 2026 جميع الحقوق محفوظة - مكتب المحامي علي عبد الله قاسم السنحاني</p>
-    <p style="font-size: 0.8rem; color: #555; margin-top: 10px;">تصميم وتطوير احترافي لمكاتب المحاماة</p>
+    <p style="font-size: 0.9rem; color: #666; margin-top: 15px;">هوية رقمية احترافية | خبير قانوني وحقوقي</p>
+    <div style="margin-top: 20px; font-size: 0.8rem; color: #444;">
+        <p>تم تطوير هذا الموقع ليكون أداة تواصل فعالة بين المحامي وموكليه</p>
+    </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/967733163848" target="_blank">💬 واتساب</a>
+  <a class="whatsapp-float" href="https://wa.me/967733163848" target="_blank">💬 استشرنا عبر واتساب</a>
 
 </body>
 </html>
